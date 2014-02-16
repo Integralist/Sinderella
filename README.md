@@ -28,11 +28,13 @@ Or install it yourself as:
 data = { :key => 'value' }
 till_midnight = 60 * 60 # 1hr
 
-Cinderella.transforms(data, till_midnight) do |data|
+id = Cinderella.transforms(data, till_midnight) do |data|
   data.each do |key, value|
     data.tap { |d| d[key].upcase! } # convert data to uppercase
   end
-end
+end # returns a hash of the data to use as an id/key
+
+Cinderella.midnight(id) # reset the data ahead of schedule
 ```
 
 ## Contributing
