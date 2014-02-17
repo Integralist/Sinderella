@@ -12,4 +12,10 @@ describe DataStore do
       pending
     end
   end
+
+  describe 'reset(id)' do
+    it 'replaces the transformed data with original data' do
+      pending
+    end
+  end
 end
