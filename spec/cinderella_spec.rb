@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Cinderella do
   let(:data) {{ :key => 'value' }}
-  let(:till_midnight) { 60 * 60 }
+  let(:till_midnight) { 0 }
 
   describe '.transforms(data, till_midnight)' do
     it 'returns a hash of the passed data' do
@@ -15,6 +15,20 @@ describe Cinderella do
 
     it 'restores the data to its original state after set time' do
       pending
+    end
+  end
+
+  describe '.get(id)' do
+    context 'before midnight (before time expired)' do
+      it 'returns transformed data' do
+        pending
+      end
+    end
+
+    context 'past midnight (after time expired)' do
+      it 'returns original data' do
+        pending
+      end
     end
   end
 
