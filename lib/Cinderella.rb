@@ -23,6 +23,10 @@ module Cinderella
     DataStore.instance.get(id)[:transformed]
   end
 
+  def self.midnight(id)
+    reset_data_at(id)
+  end
+
   private
 
   def self.store(data)
