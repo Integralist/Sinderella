@@ -20,7 +20,15 @@ describe DataStore do
 
   describe 'get(id)' do
     it 'returns data hash' do
-      pending
+      instance.set({
+        :id => 'foo',
+        :original => original,
+        :transformed => transformed
+      })
+
+      expect(instance.get('foo')).to be_a Hash
+      expect(instance.get('foo').key?(:original)).to be true
+      expect(instance.get('foo').key?(:transformed)).to be true
     end
   end
 
