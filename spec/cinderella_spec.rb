@@ -6,7 +6,15 @@ describe Cinderella do
 
   describe '.transforms(data, till_midnight)' do
     it 'returns a hash of the passed data' do
-      pending
+      id = subject.transforms(data, till_midnight) do |data|
+        data.each do |key, value|
+          data.tap { |d| d[key].upcase! }
+        end
+      end
+
+      expect(id).to be_a String
+      expect(id).to eq '24e73d3a4f027ff81ed4f32c8a9b8713'
+      expect(subject.get(id)).to eq({ :key => 'VALUE' })
     end
 
     it 'stores original and transformed data' do
