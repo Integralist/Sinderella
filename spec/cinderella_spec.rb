@@ -13,12 +13,10 @@ describe Cinderella do
   end
 
   describe '.transforms(data, till_midnight)' do
-    context 'before midnight (before time expired)' do
-      it 'returns a hash of the passed data' do
-        create_new_instance
-        expect(@id).to be_a String
-        expect(@id).to eq '24e73d3a4f027ff81ed4f32c8a9b8713'
-      end
+    it 'returns a hash of the passed data' do
+      create_new_instance
+      expect(@id).to be_a String
+      expect(@id).to eq '24e73d3a4f027ff81ed4f32c8a9b8713'
     end
   end
 
