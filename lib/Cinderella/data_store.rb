@@ -16,6 +16,16 @@ class DataStore
     container.fetch(id)
   end
 
+  def reset(id)
+    original  = container.fetch(id)[:original]
+    hash_data = {
+      :original => original,
+      :transformed => original
+    }
+
+    container.store(id, hash_data)
+  end
+
   private
 
   def container

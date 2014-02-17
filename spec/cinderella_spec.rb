@@ -5,24 +5,33 @@ describe Cinderella do
   let(:till_midnight) { 0 }
 
   describe '.transforms(data, till_midnight)' do
-    it 'returns a hash of the passed data' do
-      id = subject.transforms(data, till_midnight) do |data|
+    def create_new_instance
+      @id = subject.transforms(data, till_midnight) do |data|
         data.each do |key, value|
           data.tap { |d| d[key].upcase! }
         end
       end
-
-      expect(id).to be_a String
-      expect(id).to eq '24e73d3a4f027ff81ed4f32c8a9b8713'
-      expect(subject.get(id)).to eq({ :key => 'VALUE' })
     end
 
-    it 'stores original and transformed data' do
-      pending
+    context 'before midnight (before time expired)' do
+      it 'returns a hash of the passed data' do
+        create_new_instance
+        expect(@id).to be_a String
+        expect(@id).to eq '24e73d3a4f027ff81ed4f32c8a9b8713'
+      end
+
+      it 'returns the transformed data' do
+        Cinderella.stub(:check)
+        create_new_instance
+        expect(subject.get(@id)).to eq({ :key => 'VALUE' })
+      end
     end
 
-    it 'restores the data to its original state after set time' do
-      pending
+    context 'past midnight (after time expired)' do
+      it 'returns the original data' do
+        create_new_instance
+        expect(subject.get(@id)).to eq({ :key => 'value' })
+      end
     end
   end
 
