@@ -50,8 +50,10 @@ describe Cinderella do
   end
 
   describe '.midnight(id)' do
-    it 'restores the data to its original state' do
-      pending
+    context 'before midnight (before time expired)' do
+      it 'restores the data to its original state' do
+        pending
+      end
     end
   end
 end
