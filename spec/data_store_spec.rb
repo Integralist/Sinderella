@@ -34,7 +34,17 @@ describe DataStore do
 
   describe 'reset(id)' do
     it 'replaces the transformed data with original data' do
-      pending
+      instance.set({
+        :id => 'foo',
+        :original => original,
+        :transformed => transformed
+      })
+
+      instance.reset('foo')
+
+      foo = instance.get('foo')
+
+      expect(foo[:original]).to eq(foo[:transformed])
     end
   end
 end
