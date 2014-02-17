@@ -42,7 +42,10 @@ describe Cinderella do
   describe '.midnight(id)' do
     context 'before midnight (before time expired)' do
       it 'restores the data to its original state' do
-        pending
+        Cinderella.stub(:check)
+        create_new_instance
+        subject.midnight(@id)
+        expect(subject.get(@id)).to eq({ :key => 'value' })
       end
     end
   end
