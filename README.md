@@ -1,5 +1,7 @@
 # Cinderella
 
+[![Build Status](https://travis-ci.org/Integralist/Cinderella.png?branch=master)](https://travis-ci.org/Integralist/Cinderella)
+
 Ruby gem which will allow authors to pass a code block to transform a data object for a specific period of time.
 
 Note that this repo exists for demonstration purposes only now, as after I had started the project I discovered there was already a [Cinderella gem](http://rubygems.org/gems/cinderella) and although the project owner has officially abandoned it I'm not able to take over the gem name...
