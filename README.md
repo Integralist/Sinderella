@@ -1,6 +1,6 @@
 # Sinderella
 
-[![Build Status](https://travis-ci.org/Integralist/Cinderella.png?branch=master)](https://travis-ci.org/Integralist/Cinderella)
+[![Build Status](https://travis-ci.org/Integralist/Sinderella.png?branch=master)](https://travis-ci.org/Integralist/Sinderella)
 
 Ruby gem which will allow authors to pass a code block to transform a data object for a specific period of time.
 
