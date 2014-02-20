@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'Cinderella/version'
+require 'sinderella/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "Cinderella"
-  spec.version       = Cinderella::VERSION
+  spec.name          = "sinderella"
+  spec.version       = Sinderella::VERSION
   spec.authors       = ["Integralist"]
   spec.email         = ["mark.mcdx@gmail.com"]
   spec.summary       = 'Transform data for short period of time'

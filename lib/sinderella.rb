@@ -1,8 +1,8 @@
-require 'Cinderella/version'
-require 'Cinderella/data_store'
+require 'sinderella/version'
+require 'sinderella/data_store'
 require 'crimp'
 
-module Cinderella
+module Sinderella
   def self.transforms(data, till_midnight = 60)
     identifier  = Crimp.signature(data)
     cloned_data = deep_copy data

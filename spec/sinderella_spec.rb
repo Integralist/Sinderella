@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Cinderella do
+describe Sinderella do
   let(:data) {{ :key => 'value' }}
   let(:till_midnight) { 0 }
 
@@ -23,7 +23,7 @@ describe Cinderella do
   describe '.get(id)' do
     context 'before midnight (before time expired)' do
       it 'returns the transformed data' do
-        Cinderella.stub(:check)
+        Sinderella.stub(:check)
         create_new_instance
         expect(subject.get(@id)).to eq({ :key => 'VALUE' })
       end
@@ -40,7 +40,7 @@ describe Cinderella do
   describe '.midnight(id)' do
     context 'before midnight (before time expired)' do
       it 'restores the data to its original state' do
-        Cinderella.stub(:check)
+        Sinderella.stub(:check)
         create_new_instance
         subject.midnight(@id)
         expect(subject.get(@id)).to eq({ :key => 'value' })

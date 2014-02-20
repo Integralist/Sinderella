@@ -1,20 +1,20 @@
-# Cinderella
+# Sinderella
 
 [![Build Status](https://travis-ci.org/Integralist/Cinderella.png?branch=master)](https://travis-ci.org/Integralist/Cinderella)
 
 Ruby gem which will allow authors to pass a code block to transform a data object for a specific period of time.
 
-Note that this repo exists for demonstration purposes only now, as after I had started the project I discovered there was already a [Cinderella gem](http://rubygems.org/gems/cinderella) and although the project owner has officially abandoned it I'm not able to take over the gem name...
+Note I created this repo and all the code under the name "Cinderella" but it later transpired that the name was already taken and although the project owner has officially abandoned it I'm not able to take over the gem name...
 
 > nope, pick a new name. If anyone cares about it in 3 years I'll hand it over.
 
-So until stated otherwise please ignore the following installation steps as you'll end up with a different project installed.
+So I decided (for now) to keep the repo name under the Cinderella name but publish the gem under the title of 'sinderella' instead. Although you may never see this comment as I might rename the repo to Sinderella before you get the chance to read this.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'Cinderella'
+    gem 'sinderella'
 
 And then execute:
 
@@ -22,7 +22,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install Cinderella
+    $ gem install sinderella
 
 ## Usage
 
@@ -30,13 +30,13 @@ Or install it yourself as:
 data = { :key => 'value' }
 till_midnight = 60 * 60 # 1hr
 
-id = Cinderella.transforms(data, till_midnight) do |data|
+id = Sinderella.transforms(data, till_midnight) do |data|
   data.each do |key, value|
     data.tap { |d| d[key].upcase! } # convert data to uppercase
   end
 end # returns a hash of the data to use as an id/key
 
-Cinderella.midnight(id) # reset the data ahead of schedule
+Sinderella.midnight(id) # reset the data ahead of schedule
 ```
 
 ## Contributing

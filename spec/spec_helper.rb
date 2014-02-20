@@ -1,2 +1,2 @@
 require 'pry'
-require 'Cinderella'
+require 'sinderella'
