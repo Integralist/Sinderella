@@ -8,7 +8,7 @@ Note I created this repo and all the code under the name "Cinderella" but it lat
 
 > nope, pick a new name. If anyone cares about it in 3 years I'll hand it over.
 
-So I decided (for now) to keep the repo name under the Cinderella name but publish the gem under the title of 'sinderella' instead. Although you may never see this comment as I might rename the repo to Sinderella before you get the chance to read this.
+So I decided to rename the project and publish the gem under the title of Sinderella instead.
 
 ## Installation
 
@@ -41,7 +41,7 @@ Sinderella.midnight(id) # reset the data ahead of schedule
 
 ## Contributing
 
-1. Fork it ( http://github.com/Integralist/Cinderella/fork )
+1. Fork it ( http://github.com/Integralist/Sinderella/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
