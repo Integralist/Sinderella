@@ -32,6 +32,7 @@ describe Sinderella do
     context 'past midnight (after time expired)' do
       it 'returns the original data' do
         create_new_instance
+        Sinderella.reset_data_at @id
         expect(subject.get(@id)).to eq({ :key => 'value' })
       end
     end
