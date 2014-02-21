@@ -41,7 +41,10 @@ end
 puts Sinderella.get(id) # => { :key => 'VALUE' }
 
 # we'll randomly reset the data before the time expires...
-puts "Resetting data early" and Sinderella.midnight(id) if (rand() * 2).to_i == 1
+if (rand() * 2).to_i == 1
+  puts "Resetting data early"
+  Sinderella.midnight(id)
+end
 
 sleep 10
 
