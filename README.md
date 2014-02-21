@@ -38,8 +38,7 @@ end # returns an md5 hash of the provided data (you can use as an id/key)
 
 Sinderella.midnight(id) # reset the data ahead of schedule
 
-Sinderella.get('24e73d3a4f027ff81ed4f32c8a9b8713') # return the transformed data for the provided md5 hash.
-# the hash is returned when using the `transform` method (see above)
+Sinderella.get(id) # return the transformed data for the provided md5 hash.
 ```
 
 ## Contributing
