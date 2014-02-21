@@ -27,6 +27,8 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
+require 'sinderella'
+
 data = { :key => 'value' }
 till_midnight = 60 * 60 # 1hr
 
