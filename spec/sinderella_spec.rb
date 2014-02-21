@@ -13,7 +13,7 @@ describe Sinderella do
   end
 
   describe '.transforms(data, till_midnight)' do
-    it 'returns a hash of the passed data' do
+    it 'returns a md5 hash of the provided data' do
       create_new_instance
       expect(@id).to be_a String
       expect(@id).to eq '24e73d3a4f027ff81ed4f32c8a9b8713'
