@@ -38,7 +38,7 @@ module Sinderella
   end
 
   def self.check(id, seconds)
-    Thread.new { sleep seconds; reset_data_at id }.join
+    Thread.new { sleep seconds; reset_data_at id }
   end
 
   def self.reset_data_at(id)
