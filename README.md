@@ -30,17 +30,29 @@ Or install it yourself as:
 require 'sinderella'
 
 data = { :key => 'value' }
-till_midnight = 60 * 60 # 1hr
+till_midnight = 60 # 1 minute
 
 id = Sinderella.transforms(data, till_midnight) do |data|
   data.each do |key, value|
-    data.tap { |d| d[key].upcase! } # convert data to uppercase
+    data.tap { |d| d[key].upcase! }
   end
-end # returns an md5 hash of the provided data (you can use as an id/key)
+end
 
-Sinderella.midnight(id) # reset the data ahead of schedule
+puts Sinderella.get(id)
 
-Sinderella.get(id) # return the transformed data for the provided md5 hash.
+# we'll randomly reset the data before the time expires...
+puts "Resetting data early" and Sinderella.midnight(id) if (rand() * 2).to_i == 1
+
+sleep 10
+
+# if reset early     == { :key => 'value' }
+# if not reset early == { :key => 'VALUE' }
+puts Sinderella.get(id)
+
+sleep 60
+
+# time has expired by this point so == { :key => 'value' }
+puts Sinderella.get(id)
 ```
 
 ## Contributing
