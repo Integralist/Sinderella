@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/Integralist/Sinderella.png?branch=master)](https://travis-ci.org/Integralist/Sinderella)
 
+[![Gem Version](https://badge.fury.io/rb/sinderella.png)](http://badge.fury.io/rb/sinderella)
+
 Ruby gem which will allow authors to pass a code block to transform a data object for a specific period of time.
 
 Note I created this repo and all the code under the name "Cinderella" but it later transpired that the name was already taken and although the project owner has officially abandoned it I'm not able to take over the gem name...
