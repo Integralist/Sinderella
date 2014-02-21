@@ -34,9 +34,12 @@ id = Sinderella.transforms(data, till_midnight) do |data|
   data.each do |key, value|
     data.tap { |d| d[key].upcase! } # convert data to uppercase
   end
-end # returns a hash of the data to use as an id/key
+end # returns an md5 hash of the provided data (you can use as an id/key)
 
 Sinderella.midnight(id) # reset the data ahead of schedule
+
+Sinderella.get('24e73d3a4f027ff81ed4f32c8a9b8713') # return the transformed data for the provided md5 hash.
+# the hash is returned when using the `transform` method (see above)
 ```
 
 ## Contributing
