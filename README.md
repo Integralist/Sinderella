@@ -38,7 +38,7 @@ id = Sinderella.transforms(data, till_midnight) do |data|
   end
 end
 
-puts Sinderella.get(id)
+puts Sinderella.get(id) # => { :key => 'VALUE' }
 
 # we'll randomly reset the data before the time expires...
 puts "Resetting data early" and Sinderella.midnight(id) if (rand() * 2).to_i == 1
